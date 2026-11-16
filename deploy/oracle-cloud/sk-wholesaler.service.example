@@ -1,0 +1,21 @@
+[Unit]
+Description=SK Wholesaler web application
+After=network.target
+
+[Service]
+Type=simple
+User=skwholesaler
+Group=skwholesaler
+WorkingDirectory=/opt/sk-wholesaler/current
+EnvironmentFile=/etc/sk-wholesaler/app.env
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/sk-wholesaler
+
+[Install]
+WantedBy=multi-user.target

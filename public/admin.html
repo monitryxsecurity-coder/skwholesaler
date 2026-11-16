@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SK Wholesaler store administration.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Store admin — SK Wholesaler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/admin.css"><script src="/admin.js" defer></script>
+  </head>
+  <body class="admin-body">
+    <header class="admin-topbar"><a class="admin-brand" href="/"><span>SK Wholesaler<i>.</i></span><small>STORE ADMIN</small></a><div class="topbar-right"><a href="/" class="storefront-link">View storefront ↗</a><button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark theme"><span aria-hidden="true">☾</span></button><span id="admin-email" class="admin-email hidden"></span><button class="admin-signout hidden" id="admin-logout">Sign out</button></div></header>
+    <main>
+      <section class="admin-login-wrap" id="admin-login-wrap">
+        <form class="admin-login" id="admin-login-form">
+          <span class="admin-eyebrow">A quiet place for the details</span><h1>Welcome <em>back.</em></h1>
+          <p>Sign in with the store administrator credentials configured on the server.</p>
+          <label>Email address<input name="email" type="email" autocomplete="username" required maxlength="254"></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required maxlength="256"></label>
+          <p class="admin-message" id="login-message" aria-live="polite"></p>
+          <button class="admin-primary" type="submit" id="login-button">Sign in <span>↗</span></button>
+          <a class="back-to-store" href="/">← Back to the storefront</a>
+        </form>
+      </section>
+      <section class="admin-layout hidden" id="admin-layout">
+        <aside class="admin-sidebar">
+          <span class="admin-eyebrow">Your store</span>
+          <button class="admin-nav active" data-panel="dashboard"><span>◫</span> Overview</button>
+          <button class="admin-nav" data-panel="orders"><span>▤</span> WhatsApp orders</button>
+          <button class="admin-nav" data-panel="products"><span>◇</span> Products</button>
+          <button class="admin-nav" data-panel="categories"><span>▦</span> Categories</button>
+          <button class="admin-nav" data-panel="blogs"><span>▧</span> Blog posts</button>
+          <button class="admin-nav" data-panel="inquiries"><span>✉</span> Inquiries <b id="inquiry-badge"></b></button>
+          <div class="sidebar-note">Thoughtful things,<br>in good hands.</div>
+        </aside>
+        <section class="admin-content">
+          <div class="admin-page-heading"><div><span class="admin-eyebrow" id="panel-eyebrow">A little overview</span><h1 id="panel-title">Your store, <em>at a glance.</em></h1></div><span class="admin-date" id="admin-date"></span></div>
+          <p class="admin-message global-message" id="admin-message" aria-live="polite"></p>
+          <div id="panel-content"></div>
+        </section>
+      </section>
+    </main>
+    <footer class="admin-footer"><span>SK Wholesaler Store Admin</span><a href="/">Storefront</a><span class="admin-credit">Designed &amp; developed by <strong>Choudhary Yasir</strong></span></footer>
+  </body>
+</html>

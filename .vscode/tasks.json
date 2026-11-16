@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "SmartCart server",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "SmartCart server (4179)",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$env:PORT='4179'; npm.cmd start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "SmartCart updated dashboard",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$env:PORT='4180'; npm.cmd start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run SmartCart",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"start"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
