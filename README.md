@@ -42,7 +42,7 @@ npm.cmd run dev
 
 ## Deploy on a persistent VM
 
-GitHub Pages cannot run this Node.js API or persist its SQLite database. To keep the existing features without migrating the database, use a VM with persistent disk storage and HTTPS. The [VM deployment guide](./deploy/oracle-cloud/README.md) includes a systemd service, reverse-proxy configuration, and update/backup steps. Choose a provider's explicitly free resources and verify its current terms before creating anything; availability and free-tier limits can change.
+GitHub Pages cannot run this Node.js API or persist its SQLite database. To keep the existing features without migrating the database, use a Node.js host with persistent disk storage. The [Northflank deployment guide](./deploy/northflank/README.md) covers a single-instance container with SQLite volume storage and an automatic HTTPS hostname; note that Northflank describes its free Developer Sandbox as non-production and requires a payment method. The [VM deployment guide](./deploy/oracle-cloud/README.md) covers a persistent-disk VM alternative. Verify current provider terms and usage before creating resources.
 
 The database must stay outside the Git checkout on persistent storage. Do not deploy the local `.env` or `data/` directory. Configure the admin credentials on the VM, and use HTTPS before handling admin sign-in or customer information.
 
